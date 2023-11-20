@@ -1,0 +1,401 @@
+/* Body */
+
+html {
+    box-sizing: border-box;
+    /*por lo general el defecto es de 16px*/
+    font-size: 62.5%; /* reset para REMS 62.5% = 10px de 16px */
+}
+/* este codigo es para que no descuadre los tamaños, osea no se incrementen, se recomienda este codigo 
+ponerlo siempre en un css */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Body */
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* Globales */
+
+/* ajusta imagenes al 100 y las que ya estan no las afecta, se recomienda este codigo ponerlo siempre en un css */
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem; /* = 1200px */
+    /*margin-left: auto;
+    margin-right: auto;*/
+    /*si se repite el auto podemos dejar solo una repeticion segun ejemplo de abajo
+    margin: 0 auto 0 auto;*/
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+/* Utilidades */
+
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.fw-300 {
+    font-weight: 300;
+}
+.centrar-texto {
+    text-align: center;
+}
+.d-block {
+    display: block!important;
+}
+.contenido-centrado {
+    max-width: 800px;
+}
+
+/* Botones */
+
+.boton {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+.boton-amarillo {
+    background-color: #e08709;
+}
+.boton-verde {
+    background-color: #71b100;
+}
+
+
+/* header */
+.site-header {
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+
+.site-header.inicio {
+    /*background: url(../img/header.jpg);*/
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    background-size: cover;
+    /*height: 800px;*/
+    height: 100vh;
+    min-height: 60rem;
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    /* puedo utilizar flex direction para direccionar el row */
+    /*flex-direction: row-reverse;*/
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.contenido-header h1 {
+    color: white;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    line-height: 2;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+/* Navegacion */
+.navegacion a {
+    color: white;
+    /* borra la linea como de subrayado ya no se utiliza es segun l tendencia */
+    text-decoration: none;
+    /* ahora la tendencia son los rems */
+    /*font-size: 18px;*/
+    font-size: 1.8rem; /* = 18px  */
+    margin-right: 2rem;
+}
+/*el hover es como el move mouse */
+.navegacion a:hover {
+    color: #71B100;
+}
+/* se conoce como un seudo selector a:last-of-type, puedes seleccionar el primer elemento o el ultimo firts */
+.navegacion a:last-of-type {
+    margin: 0;
+}
+
+/* Iconos Nosotros */
+
+/* pero puedo crear una clase para cada metodo font y text */
+/*.encabezado-nosotros {
+    font-weight: 300;
+    text-align: center;
+}*/
+
+.iconos-nosotros {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono {
+    /* puedo realizar calculos matematicos segun ejemplo */
+    /*flex-basis: calc(200px - 50px);*/
+    flex-basis: calc(33.3% - 1rem);
+    text-align: center;
+}
+
+.icono h3 {
+    text-transform: uppercase;
+}
+
+/* Anuncios */
+.contenedor-anuncios {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.anuncio {
+    /*estos tres podemos dejarlo en una sola line ade comando*/
+    flex: 0 0 calc(33.3% - 1rem);
+    /*flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(33.3% - 1rem);*/
+    /*text-align: center;*/
+    /* se puede utilizar las 3 lines o una sola linea con las tres propiedades */
+    /*border-style: solid;
+    border-color: #b5b5b5;
+    border-width: 1px;*/
+    border: 1px solid #b5b5b5;
+    background-color: #f5f5f5;
+    margin-bottom: 2rem;
+}
+
+.contenido-anuncio {
+    /* padding separa de los bordes, el padding solo ase lo mismo que si escribiera padding top, right, 
+    bottom o left */
+    padding: 2rem;
+}
+
+.contenido-anuncio h3, .contenido-anuncio p {
+    margin: 0;
+}
+
+.precio {
+    color: #71B100;
+    font-weight: 700;
+}
+
+.iconos-caracteristicas {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    max-width: 500px;
+}
+
+.iconos-caracteristicas li {
+    flex: 1;
+    display: flex;
+}
+
+.iconos-caracteristicas li img {
+    margin-right: 2rem;
+}
+
+.ver-todas {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* Imagen Home */
+
+.imagen-contacto {
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+
+.contenido-contacto {
+    flex: 1;
+    color: #ffffff;
+}
+
+.contenido-contacto p {
+    font-size: 1.8rem;
+}
+
+
+/* Seccion inferior */
+
+.seccion-inferior {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion-inferior .blog {
+    flex-basis: 60%;
+}
+
+.seccion-inferior .testimoniales {
+    flex-basis: calc(40% - 2rem);
+}
+
+.entrada-blog {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.entrada-blog :last-of-type {
+    margin-bottom: 0
+}
+
+.entrada-blog .imagen {
+    flex-basis: 40%;
+}
+
+.entrada-blog .texto-entrada {
+    flex-basis: calc(60% - 3rem);
+}
+
+.texto-entrada a {
+    margin: 0;
+    text-decoration: none; 
+}
+
+.texto-entrada h4 {
+    color: black;
+    line-height: 1.4;
+}
+/* esto es un seudo elementos nunca ss deja seleccionar en la web no puede ir sin espacios */
+/* existen seudo selectores (clases) y elementos los mejores estan en mozilla firefox */
+.texto-entrada h4::after {
+    /*content: 'Hola';*/
+    content: '';
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: #71B100;
+    margin-top: 1rem;
+}
+
+.texto-entrada span {
+    color: #e08709;
+}
+
+/* Testimoniales */
+
+.testimonial {
+    background-color: #71B100;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: #ffffff;
+    /* con esto puedes crear un circulo */
+    /*border-radius: 50%;*/
+    border-radius: 2rem;
+}
+
+.testimonial p {
+    text-align: right;
+}
+
+.testimonial blockquote::before {
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    left: -2rem;
+}
+
+.testimonial blockquote {
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+
+/* Footer */
+
+.site-footer {
+    background-color: #333333;
+    margin: 0;
+}
+
+.contenedor-footer {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copiright {
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Paginas Internas */
+/* Nosotros */
+.contenido-nosotros {
+    display: grid;
+    /*dependiendo de los hijos en el html asi mismo defino los %, en este caso solo son dos*/
+    /*por tal motivo va 50% o un fr= Fraccion 1fr o repeat(2, 50%   ) */
+    grid-template-columns: 50% 50%;
+    /*se utilizo porque ya save que es gri sino utilizamos lo anterior de la clase osea flex*/
+    grid-column-gap: 2rem;
+}
+
+.texto-nosotros blockquote {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
+}
+
+/* Anuncio */
+.resumen-propiedad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        
+}
+
+/* Contacto */
+
+label {
+    display: block;
+}
+

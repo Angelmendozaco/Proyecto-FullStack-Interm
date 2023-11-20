@@ -1,0 +1,29 @@
+/*
+h1 {
+    color: blue;
+    font-size: 16px;
+}
+
+#site-header{
+    background-color: red;
+}
+
+header{
+    background-color: red;
+}*/
+
+/*no debe exister mas de dos Id # con el mismo nombre, no es muy buena practica, es un poco limitado en este caso
+creo que clase es mejor porque se puede reutilizar con el mismo nombre*/
+#site-header{
+    background-color: red;
+}
+
+/*en cambio la clase . si esta hecha para eso para que se repita a dodne la necesitas, tambien es mas rapida 
+que el ID*/
+.encabezado{
+    color: blue;
+}
+
+.mayusculas{
+    text-transform: uppercase;
+}
